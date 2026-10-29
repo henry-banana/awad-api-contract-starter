@@ -21,8 +21,13 @@ drive prefix and percent escapes in a filesystem path. scripts/migrate.js now
 uses fileURLToPath. This environment fix was made before API implementation.
 Legacy: 3 passed. Contract: 0 passed, 27 failed, 2 cancelled in the multi-instance
 setup hook. baseline-contract.txt preserves that run, not an implementation run.
-The unchanged test suite will also run under Linux Node through WSL, because the
-multi-instance hook cannot launch npm correctly in this Windows environment.
+Linux Node v22.13.1 through WSL, from a clean temporary path: legacy 3 passed;
+contract 0 passed, 29 failed, 0 cancelled. baseline-contract-linux.txt records it.
+Besides Windows npm launching, the unchanged multi-instance test hook uses a URL
+pathname as its working directory, so spaces and '#' in the checkout path also
+prevent startup. scripts/verify-linux.sh copies the repository without data or
+.git into a safe temporary path, then runs the original commands and test files.
+No test source or assertion is changed. The original Windows baseline is retained.
 
 ## Pre-implementation predictions
 

@@ -1,0 +1,1037 @@
+
+> awad-api-contract-starter@1.0.0 contract
+> node --test --test-reporter=spec test/contract.test.js
+
+(node:662) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+▶ §2 errors
+  ✖ §2 an unknown /v1 path is a 404 problem (18.969102ms)
+    AssertionError [ERR_ASSERTION]: content-type  → 404 {"error":"not_found","message":"no such route"}
+        at assertProblem (file:///tmp/ia03-verify.02vqGX/test/contract.test.js:36:10)
+        at TestContext.<anonymous> (file:///tmp/ia03-verify.02vqGX/test/contract.test.js:62:5)
+        at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+        at async Test.run (node:internal/test_runner/test:932:9)
+        at async Promise.all (index 0)
+        at async Suite.run (node:internal/test_runner/test:1310:7)
+        at async startSubtestAfterBootstrap (node:internal/test_runner/harness:296:3) {
+      generatedMessage: false,
+      code: 'ERR_ASSERTION',
+      actual: 'application/json',
+      expected: /^application\/problem\+json/,
+      operator: 'match'
+    }
+
+  ✖ §2 malformed JSON is 400 invalid-json (8.006272ms)
+    AssertionError [ERR_ASSERTION]: status  → 404 {"error":"not_found","message":"no such route"}
+    
+    404 !== 400
+    
+        at assertProblem (file:///tmp/ia03-verify.02vqGX/test/contract.test.js:35:10)
+        at TestContext.<anonymous> (file:///tmp/ia03-verify.02vqGX/test/contract.test.js:66:5)
+        at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+        at async Test.run (node:internal/test_runner/test:932:9)
+        at async Suite.processPendingSubtests (node:internal/test_runner/test:629:7) {
+      generatedMessage: false,
+      code: 'ERR_ASSERTION',
+      actual: 404,
+      expected: 400,
+      operator: 'strictEqual'
+    }
+
+  ✖ §2 validation lists every broken field, with a JSON Pointer each (3.184062ms)
+    AssertionError [ERR_ASSERTION]: status  → 404 {"error":"not_found","message":"no such route"}
+    
+    404 !== 400
+    
+        at assertProblem (file:///tmp/ia03-verify.02vqGX/test/contract.test.js:35:10)
+        at TestContext.<anonymous> (file:///tmp/ia03-verify.02vqGX/test/contract.test.js:71:5)
+        at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+        at async Test.run (node:internal/test_runner/test:932:9)
+        at async Suite.processPendingSubtests (node:internal/test_runner/test:629:7) {
+      generatedMessage: false,
+      code: 'ERR_ASSERTION',
+      actual: 404,
+      expected: 400,
+      operator: 'strictEqual'
+    }
+
+  ✖ §2 a JSON body that is not an object is a validation error, not a crash (2.607044ms)
+    AssertionError [ERR_ASSERTION]: status body null → 404 {"error":"not_found","message":"no such route"}
+    
+    404 !== 400
+    
+        at assertProblem (file:///tmp/ia03-verify.02vqGX/test/contract.test.js:35:10)
+        at TestContext.<anonymous> (file:///tmp/ia03-verify.02vqGX/test/contract.test.js:81:7)
+        at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+        at async Test.run (node:internal/test_runner/test:932:9)
+        at async Suite.processPendingSubtests (node:internal/test_runner/test:629:7) {
+      generatedMessage: false,
+      code: 'ERR_ASSERTION',
+      actual: 404,
+      expected: 400,
+      operator: 'strictEqual'
+    }
+
+  ✖ §2 a 500 is a problem that says nothing about the inside (3.912032ms)
+    AssertionError [ERR_ASSERTION]: status after dropping the orders table → 404 {"error":"not_found","message":"no such route"}
+    
+    404 !== 500
+    
+        at assertProblem (file:///tmp/ia03-verify.02vqGX/test/contract.test.js:35:10)
+        at TestContext.<anonymous> (file:///tmp/ia03-verify.02vqGX/test/contract.test.js:90:7)
+        at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+        at async Test.run (node:internal/test_runner/test:932:9)
+        at async Suite.processPendingSubtests (node:internal/test_runner/test:629:7) {
+      generatedMessage: false,
+      code: 'ERR_ASSERTION',
+      actual: 404,
+      expected: 500,
+      operator: 'strictEqual'
+    }
+
+✖ §2 errors (38.347412ms)
+▶ §4.1 menu
+  ✖ §4.1 GET /v1/menu/{id} returns priceVnd in dong (6.292443ms)
+    AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+    
+    404 !== 200
+    
+        at TestContext.<anonymous> (file:///tmp/ia03-verify.02vqGX/test/contract.test.js:98:12)
+        at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+        at async Test.run (node:internal/test_runner/test:932:9)
+        at async Promise.all (index 0)
+        at async Suite.run (node:internal/test_runner/test:1310:7)
+        at async Test.processPendingSubtests (node:internal/test_runner/test:629:7) {
+      generatedMessage: true,
+      code: 'ERR_ASSERTION',
+      actual: 404,
+      expected: 200,
+      operator: 'strictEqual'
+    }
+
+  ✖ §4.1 unknown or malformed id is 404 not-found (2.850692ms)
+    AssertionError [ERR_ASSERTION]: content-type  → 404 {"error":"not_found","message":"no such route"}
+        at assertProblem (file:///tmp/ia03-verify.02vqGX/test/contract.test.js:36:10)
+        at TestContext.<anonymous> (file:///tmp/ia03-verify.02vqGX/test/contract.test.js:104:5)
+        at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+        at async Test.run (node:internal/test_runner/test:932:9)
+        at async Suite.processPendingSubtests (node:internal/test_runner/test:629:7) {
+      generatedMessage: false,
+      code: 'ERR_ASSERTION',
+      actual: 'application/json',
+      expected: /^application\/problem\+json/,
+      operator: 'match'
+    }
+
+✖ §4.1 menu (9.570723ms)
+▶ §4.2 placing an order
+  ✖ §4.2 201, Location, totals in dong, lines in the order sent (3.207401ms)
+    AssertionError [ERR_ASSERTION]: {"error":"not_found","message":"no such route"}
+    
+    404 !== 201
+    
+        at TestContext.<anonymous> (file:///tmp/ia03-verify.02vqGX/test/contract.test.js:113:12)
+        at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+        at async Test.run (node:internal/test_runner/test:932:9)
+        at async Promise.all (index 0)
+        at async Suite.run (node:internal/test_runner/test:1310:7)
+        at async Test.processPendingSubtests (node:internal/test_runner/test:629:7) {
+      generatedMessage: false,
+      code: 'ERR_ASSERTION',
+      actual: 404,
+      expected: 201,
+      operator: 'strictEqual'
+    }
+
+  ✖ §4.2 unknown menu item is 422 with a pointer per unknown line (3.696781ms)
+    AssertionError [ERR_ASSERTION]: status  → 404 {"error":"not_found","message":"no such route"}
+    
+    404 !== 422
+    
+        at assertProblem (file:///tmp/ia03-verify.02vqGX/test/contract.test.js:35:10)
+        at TestContext.<anonymous> (file:///tmp/ia03-verify.02vqGX/test/contract.test.js:130:5)
+        at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+        at async Test.run (node:internal/test_runner/test:932:9)
+        at async Suite.processPendingSubtests (node:internal/test_runner/test:629:7) {
+      generatedMessage: false,
+      code: 'ERR_ASSERTION',
+      actual: 404,
+      expected: 422,
+      operator: 'strictEqual'
+    }
+
+  ✖ §4.2 rules on fields: tableId 1..200, 1..20 lines, qty 1..20 (3.639169ms)
+    AssertionError [ERR_ASSERTION]: status {"tableId":201,"items":[{"menuItemId":1,"qty":1}]} → 404 {"error":"not_found","message":"no such route"}
+    
+    404 !== 400
+    
+        at assertProblem (file:///tmp/ia03-verify.02vqGX/test/contract.test.js:35:10)
+        at TestContext.<anonymous> (file:///tmp/ia03-verify.02vqGX/test/contract.test.js:144:29)
+        at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+        at async Test.run (node:internal/test_runner/test:932:9)
+        at async Suite.processPendingSubtests (node:internal/test_runner/test:629:7) {
+      generatedMessage: false,
+      code: 'ERR_ASSERTION',
+      actual: 404,
+      expected: 400,
+      operator: 'strictEqual'
+    }
+
+  ✖ §4.2 a unit price is the price when the order was placed (3.550968ms)
+    AssertionError [ERR_ASSERTION]: {"error":"not_found","message":"no such route"}
+    
+    404 !== 201
+    
+        at TestContext.<anonymous> (file:///tmp/ia03-verify.02vqGX/test/contract.test.js:150:12)
+        at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+        at async Test.run (node:internal/test_runner/test:932:9)
+        at async Suite.processPendingSubtests (node:internal/test_runner/test:629:7) {
+      generatedMessage: false,
+      code: 'ERR_ASSERTION',
+      actual: 404,
+      expected: 201,
+      operator: 'strictEqual'
+    }
+
+  ✖ §4.3 GET /v1/orders/{id} of an unknown order is 404 not-found (1.71584ms)
+    AssertionError [ERR_ASSERTION]: content-type  → 404 {"error":"not_found","message":"no such route"}
+        at assertProblem (file:///tmp/ia03-verify.02vqGX/test/contract.test.js:36:10)
+        at TestContext.<anonymous> (file:///tmp/ia03-verify.02vqGX/test/contract.test.js:159:5)
+        at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+        at async Test.run (node:internal/test_runner/test:932:9)
+        at async Suite.processPendingSubtests (node:internal/test_runner/test:629:7) {
+      generatedMessage: false,
+      code: 'ERR_ASSERTION',
+      actual: 'application/json',
+      expected: /^application\/problem\+json/,
+      operator: 'match'
+    }
+
+✖ §4.2 placing an order (16.339313ms)
+▶ §4.2 idempotency
+  ✖ §4.2 no Idempotency-Key is 400 and creates nothing (2.499373ms)
+    AssertionError [ERR_ASSERTION]: status  → 404 {"error":"not_found","message":"no such route"}
+    
+    404 !== 400
+    
+        at assertProblem (file:///tmp/ia03-verify.02vqGX/test/contract.test.js:35:10)
+        at TestContext.<anonymous> (file:///tmp/ia03-verify.02vqGX/test/contract.test.js:167:5)
+        at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+        at async Test.run (node:internal/test_runner/test:932:9)
+        at async Promise.all (index 0)
+        at async Suite.run (node:internal/test_runner/test:1310:7)
+        at async Test.processPendingSubtests (node:internal/test_runner/test:629:7) {
+      generatedMessage: false,
+      code: 'ERR_ASSERTION',
+      actual: 404,
+      expected: 400,
+      operator: 'strictEqual'
+    }
+
+  ✖ §4.2 the key is checked before the body (1.949184ms)
+    AssertionError [ERR_ASSERTION]: status  → 404 {"error":"not_found","message":"no such route"}
+    
+    404 !== 400
+    
+        at assertProblem (file:///tmp/ia03-verify.02vqGX/test/contract.test.js:35:10)
+        at TestContext.<anonymous> (file:///tmp/ia03-verify.02vqGX/test/contract.test.js:175:5)
+        at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+        at async Test.run (node:internal/test_runner/test:932:9)
+        at async Suite.processPendingSubtests (node:internal/test_runner/test:629:7) {
+      generatedMessage: false,
+      code: 'ERR_ASSERTION',
+      actual: 404,
+      expected: 400,
+      operator: 'strictEqual'
+    }
+
+  ✖ §4.2 a retry with the same key and body replays the first response (2.366058ms)
+    AssertionError [ERR_ASSERTION]: {"error":"not_found","message":"no such route"}
+    
+    404 !== 201
+    
+        at TestContext.<anonymous> (file:///tmp/ia03-verify.02vqGX/test/contract.test.js:181:12)
+        at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+        at async Test.run (node:internal/test_runner/test:932:9)
+        at async Suite.processPendingSubtests (node:internal/test_runner/test:629:7) {
+      generatedMessage: false,
+      code: 'ERR_ASSERTION',
+      actual: 404,
+      expected: 201,
+      operator: 'strictEqual'
+    }
+
+  ✖ §4.2 "the same body" means the same JSON value: key order and whitespace do not matter (2.510632ms)
+    AssertionError [ERR_ASSERTION]: {"error":"not_found","message":"no such route"}
+    
+    404 !== 201
+    
+        at TestContext.<anonymous> (file:///tmp/ia03-verify.02vqGX/test/contract.test.js:194:12)
+        at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+        at async Test.run (node:internal/test_runner/test:932:9)
+        at async Suite.processPendingSubtests (node:internal/test_runner/test:629:7) {
+      generatedMessage: false,
+      code: 'ERR_ASSERTION',
+      actual: 404,
+      expected: 201,
+      operator: 'strictEqual'
+    }
+
+  ✖ §4.2 the same key with a different body is 422 and creates nothing (3.625342ms)
+    AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+    
+    404 !== 201
+    
+        at TestContext.<anonymous> (file:///tmp/ia03-verify.02vqGX/test/contract.test.js:203:12)
+        at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+        at async Test.run (node:internal/test_runner/test:932:9)
+        at async Suite.processPendingSubtests (node:internal/test_runner/test:629:7) {
+      generatedMessage: true,
+      code: 'ERR_ASSERTION',
+      actual: 404,
+      expected: 201,
+      operator: 'strictEqual'
+    }
+
+  ✖ §4.2 only a 201 is stored: after a 4xx the same key may be used with a fixed body (1.640785ms)
+    AssertionError [ERR_ASSERTION]: status  → 404 {"error":"not_found","message":"no such route"}
+    
+    404 !== 400
+    
+        at assertProblem (file:///tmp/ia03-verify.02vqGX/test/contract.test.js:35:10)
+        at TestContext.<anonymous> (file:///tmp/ia03-verify.02vqGX/test/contract.test.js:213:5)
+        at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+        at async Test.run (node:internal/test_runner/test:932:9)
+        at async Suite.processPendingSubtests (node:internal/test_runner/test:629:7) {
+      generatedMessage: false,
+      code: 'ERR_ASSERTION',
+      actual: 404,
+      expected: 400,
+      operator: 'strictEqual'
+    }
+
+  ✖ §4.2 the same key sent five times at once places one order (7.851417ms)
+    AssertionError [ERR_ASSERTION]: 404 {"error":"not_found","message":"no such route"}
+        at TestContext.<anonymous> (file:///tmp/ia03-verify.02vqGX/test/contract.test.js:227:32)
+        at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+        at async Test.run (node:internal/test_runner/test:932:9)
+        at async Suite.processPendingSubtests (node:internal/test_runner/test:629:7) {
+      generatedMessage: false,
+      code: 'ERR_ASSERTION',
+      actual: false,
+      expected: true,
+      operator: '=='
+    }
+
+✖ §4.2 idempotency (22.988951ms)
+▶ §4.4 pagination
+  ✖ §4.4 newest first; every order exactly once; default page size 20 (1.799661ms)
+    AssertionError [ERR_ASSERTION]: {"error":"not_found","message":"no such route"}
+    
+    404 !== 201
+    
+        at placeMany (file:///tmp/ia03-verify.02vqGX/test/contract.test.js:241:14)
+        at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+        at async TestContext.<anonymous> (file:///tmp/ia03-verify.02vqGX/test/contract.test.js:249:17)
+        at async Test.run (node:internal/test_runner/test:932:9)
+        at async Promise.all (index 0)
+        at async Suite.run (node:internal/test_runner/test:1310:7)
+        at async Test.processPendingSubtests (node:internal/test_runner/test:629:7) {
+      generatedMessage: false,
+      code: 'ERR_ASSERTION',
+      actual: 404,
+      expected: 201,
+      operator: 'strictEqual'
+    }
+
+  ✖ §4.4 nextCursor is null exactly when there is nothing more (2.170708ms)
+    AssertionError [ERR_ASSERTION]: {"error":"not_found","message":"no such route"}
+    
+    404 !== 201
+    
+        at placeMany (file:///tmp/ia03-verify.02vqGX/test/contract.test.js:241:14)
+        at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+        at async TestContext.<anonymous> (file:///tmp/ia03-verify.02vqGX/test/contract.test.js:258:5)
+        at async Test.run (node:internal/test_runner/test:932:9)
+        at async Suite.processPendingSubtests (node:internal/test_runner/test:629:7) {
+      generatedMessage: false,
+      code: 'ERR_ASSERTION',
+      actual: 404,
+      expected: 201,
+      operator: 'strictEqual'
+    }
+
+  ✖ §4.4 an order placed between two pages does not shift the next page (1.825587ms)
+    AssertionError [ERR_ASSERTION]: {"error":"not_found","message":"no such route"}
+    
+    404 !== 201
+    
+        at placeMany (file:///tmp/ia03-verify.02vqGX/test/contract.test.js:241:14)
+        at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+        at async TestContext.<anonymous> (file:///tmp/ia03-verify.02vqGX/test/contract.test.js:267:17)
+        at async Test.run (node:internal/test_runner/test:932:9)
+        at async Suite.processPendingSubtests (node:internal/test_runner/test:629:7) {
+      generatedMessage: false,
+      code: 'ERR_ASSERTION',
+      actual: 404,
+      expected: 201,
+      operator: 'strictEqual'
+    }
+
+  ✖ §4.4 out-of-range limit is an error, not clamped (1.426848ms)
+    AssertionError [ERR_ASSERTION]: status limit=0 → 404 {"error":"not_found","message":"no such route"}
+    
+    404 !== 400
+    
+        at assertProblem (file:///tmp/ia03-verify.02vqGX/test/contract.test.js:35:10)
+        at TestContext.<anonymous> (file:///tmp/ia03-verify.02vqGX/test/contract.test.js:282:7)
+        at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+        at async Test.run (node:internal/test_runner/test:932:9)
+        at async Suite.processPendingSubtests (node:internal/test_runner/test:629:7) {
+      generatedMessage: false,
+      code: 'ERR_ASSERTION',
+      actual: 404,
+      expected: 400,
+      operator: 'strictEqual'
+    }
+
+  ✖ §4.4 a cursor the server cannot read is 400 validation (1.543129ms)
+    AssertionError [ERR_ASSERTION]: status cursor=not-a-cursor → 404 {"error":"not_found","message":"no such route"}
+    
+    404 !== 400
+    
+        at assertProblem (file:///tmp/ia03-verify.02vqGX/test/contract.test.js:35:10)
+        at TestContext.<anonymous> (file:///tmp/ia03-verify.02vqGX/test/contract.test.js:291:7)
+        at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+        at async Test.run (node:internal/test_runner/test:932:9)
+        at async Suite.processPendingSubtests (node:internal/test_runner/test:629:7) {
+      generatedMessage: false,
+      code: 'ERR_ASSERTION',
+      actual: 404,
+      expected: 400,
+      operator: 'strictEqual'
+    }
+
+✖ §4.4 pagination (9.217954ms)
+▶ §5 versions and the legacy API
+  ✖ §5 legacy GET /menu/{id} is unchanged, and announces its end (3.789781ms)
+    AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+    + actual - expected
+    
+    + null
+    - '@1792022400'
+    
+        at TestContext.<anonymous> (file:///tmp/ia03-verify.02vqGX/test/contract.test.js:302:12)
+        at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+        at async Test.run (node:internal/test_runner/test:932:9)
+        at async Promise.all (index 0)
+        at async Suite.run (node:internal/test_runner/test:1310:7)
+        at async Test.processPendingSubtests (node:internal/test_runner/test:629:7) {
+      generatedMessage: true,
+      code: 'ERR_ASSERTION',
+      actual: null,
+      expected: '@1792022400',
+      operator: 'strictEqual'
+    }
+
+  ✖ §5 legacy errors keep their old shape — the new error model is for /v1 only (2.07685ms)
+    AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+    + actual - expected
+    
+    + null
+    - '@1792022400'
+    
+        at TestContext.<anonymous> (file:///tmp/ia03-verify.02vqGX/test/contract.test.js:314:12)
+        at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+        at async Test.run (node:internal/test_runner/test:932:9)
+        at async Suite.processPendingSubtests (node:internal/test_runner/test:629:7) {
+      generatedMessage: true,
+      code: 'ERR_ASSERTION',
+      actual: null,
+      expected: '@1792022400',
+      operator: 'strictEqual'
+    }
+
+  ✖ §5 a price written through the legacy API reads the same through v1 (2.293806ms)
+    AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+    + actual - expected
+    
+    + null
+    - '@1792022400'
+    
+        at TestContext.<anonymous> (file:///tmp/ia03-verify.02vqGX/test/contract.test.js:326:12)
+        at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+        at async Test.run (node:internal/test_runner/test:932:9)
+        at async Suite.processPendingSubtests (node:internal/test_runner/test:629:7) {
+      generatedMessage: true,
+      code: 'ERR_ASSERTION',
+      actual: null,
+      expected: '@1792022400',
+      operator: 'strictEqual'
+    }
+
+✖ §5 versions and the legacy API (8.441986ms)
+▶ §4 two instances, one database (as in session 4)
+  ✖ §4.2 a retry that lands on the other instance is still a replay (3.509377ms)
+    AssertionError [ERR_ASSERTION]: {"error":"not_found","message":"no such route"}
+    
+    404 !== 201
+    
+        at TestContext.<anonymous> (file:///tmp/ia03-verify.02vqGX/test/contract.test.js:374:12)
+        at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+        at async Test.run (node:internal/test_runner/test:932:9)
+        at async Promise.all (index 0)
+        at async Suite.run (node:internal/test_runner/test:1310:7)
+        at async Test.processPendingSubtests (node:internal/test_runner/test:629:7) {
+      generatedMessage: false,
+      code: 'ERR_ASSERTION',
+      actual: 404,
+      expected: 201,
+      operator: 'strictEqual'
+    }
+
+  ✖ §4.4 a cursor from one instance works on the other (6.221561ms)
+    AssertionError [ERR_ASSERTION]: {"error":"not_found","message":"no such route"}
+    
+    404 !== 200
+    
+        at TestContext.<anonymous> (file:///tmp/ia03-verify.02vqGX/test/contract.test.js:387:12)
+        at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+        at async Test.run (node:internal/test_runner/test:932:9)
+        at async Suite.processPendingSubtests (node:internal/test_runner/test:629:7) {
+      generatedMessage: false,
+      code: 'ERR_ASSERTION',
+      actual: 404,
+      expected: 200,
+      operator: 'strictEqual'
+    }
+
+✖ §4 two instances, one database (as in session 4) (115.75943ms)
+ℹ tests 29
+ℹ suites 7
+ℹ pass 0
+ℹ fail 29
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 289.159841
+
+✖ failing tests:
+
+test at test/contract.test.js:61:3
+✖ §2 an unknown /v1 path is a 404 problem (18.969102ms)
+  AssertionError [ERR_ASSERTION]: content-type  → 404 {"error":"not_found","message":"no such route"}
+      at assertProblem (file:///tmp/ia03-verify.02vqGX/test/contract.test.js:36:10)
+      at TestContext.<anonymous> (file:///tmp/ia03-verify.02vqGX/test/contract.test.js:62:5)
+      at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+      at async Test.run (node:internal/test_runner/test:932:9)
+      at async Promise.all (index 0)
+      at async Suite.run (node:internal/test_runner/test:1310:7)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:296:3) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: 'application/json',
+    expected: /^application\/problem\+json/,
+    operator: 'match'
+  }
+
+test at test/contract.test.js:65:3
+✖ §2 malformed JSON is 400 invalid-json (8.006272ms)
+  AssertionError [ERR_ASSERTION]: status  → 404 {"error":"not_found","message":"no such route"}
+  
+  404 !== 400
+  
+      at assertProblem (file:///tmp/ia03-verify.02vqGX/test/contract.test.js:35:10)
+      at TestContext.<anonymous> (file:///tmp/ia03-verify.02vqGX/test/contract.test.js:66:5)
+      at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+      at async Test.run (node:internal/test_runner/test:932:9)
+      at async Suite.processPendingSubtests (node:internal/test_runner/test:629:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: 404,
+    expected: 400,
+    operator: 'strictEqual'
+  }
+
+test at test/contract.test.js:69:3
+✖ §2 validation lists every broken field, with a JSON Pointer each (3.184062ms)
+  AssertionError [ERR_ASSERTION]: status  → 404 {"error":"not_found","message":"no such route"}
+  
+  404 !== 400
+  
+      at assertProblem (file:///tmp/ia03-verify.02vqGX/test/contract.test.js:35:10)
+      at TestContext.<anonymous> (file:///tmp/ia03-verify.02vqGX/test/contract.test.js:71:5)
+      at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+      at async Test.run (node:internal/test_runner/test:932:9)
+      at async Suite.processPendingSubtests (node:internal/test_runner/test:629:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: 404,
+    expected: 400,
+    operator: 'strictEqual'
+  }
+
+test at test/contract.test.js:78:3
+✖ §2 a JSON body that is not an object is a validation error, not a crash (2.607044ms)
+  AssertionError [ERR_ASSERTION]: status body null → 404 {"error":"not_found","message":"no such route"}
+  
+  404 !== 400
+  
+      at assertProblem (file:///tmp/ia03-verify.02vqGX/test/contract.test.js:35:10)
+      at TestContext.<anonymous> (file:///tmp/ia03-verify.02vqGX/test/contract.test.js:81:7)
+      at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+      at async Test.run (node:internal/test_runner/test:932:9)
+      at async Suite.processPendingSubtests (node:internal/test_runner/test:629:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: 404,
+    expected: 400,
+    operator: 'strictEqual'
+  }
+
+test at test/contract.test.js:85:3
+✖ §2 a 500 is a problem that says nothing about the inside (3.912032ms)
+  AssertionError [ERR_ASSERTION]: status after dropping the orders table → 404 {"error":"not_found","message":"no such route"}
+  
+  404 !== 500
+  
+      at assertProblem (file:///tmp/ia03-verify.02vqGX/test/contract.test.js:35:10)
+      at TestContext.<anonymous> (file:///tmp/ia03-verify.02vqGX/test/contract.test.js:90:7)
+      at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+      at async Test.run (node:internal/test_runner/test:932:9)
+      at async Suite.processPendingSubtests (node:internal/test_runner/test:629:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: 404,
+    expected: 500,
+    operator: 'strictEqual'
+  }
+
+test at test/contract.test.js:96:3
+✖ §4.1 GET /v1/menu/{id} returns priceVnd in dong (6.292443ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  404 !== 200
+  
+      at TestContext.<anonymous> (file:///tmp/ia03-verify.02vqGX/test/contract.test.js:98:12)
+      at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+      at async Test.run (node:internal/test_runner/test:932:9)
+      at async Promise.all (index 0)
+      at async Suite.run (node:internal/test_runner/test:1310:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:629:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 404,
+    expected: 200,
+    operator: 'strictEqual'
+  }
+
+test at test/contract.test.js:103:3
+✖ §4.1 unknown or malformed id is 404 not-found (2.850692ms)
+  AssertionError [ERR_ASSERTION]: content-type  → 404 {"error":"not_found","message":"no such route"}
+      at assertProblem (file:///tmp/ia03-verify.02vqGX/test/contract.test.js:36:10)
+      at TestContext.<anonymous> (file:///tmp/ia03-verify.02vqGX/test/contract.test.js:104:5)
+      at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+      at async Test.run (node:internal/test_runner/test:932:9)
+      at async Suite.processPendingSubtests (node:internal/test_runner/test:629:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: 'application/json',
+    expected: /^application\/problem\+json/,
+    operator: 'match'
+  }
+
+test at test/contract.test.js:110:3
+✖ §4.2 201, Location, totals in dong, lines in the order sent (3.207401ms)
+  AssertionError [ERR_ASSERTION]: {"error":"not_found","message":"no such route"}
+  
+  404 !== 201
+  
+      at TestContext.<anonymous> (file:///tmp/ia03-verify.02vqGX/test/contract.test.js:113:12)
+      at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+      at async Test.run (node:internal/test_runner/test:932:9)
+      at async Promise.all (index 0)
+      at async Suite.run (node:internal/test_runner/test:1310:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:629:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: 404,
+    expected: 201,
+    operator: 'strictEqual'
+  }
+
+test at test/contract.test.js:128:3
+✖ §4.2 unknown menu item is 422 with a pointer per unknown line (3.696781ms)
+  AssertionError [ERR_ASSERTION]: status  → 404 {"error":"not_found","message":"no such route"}
+  
+  404 !== 422
+  
+      at assertProblem (file:///tmp/ia03-verify.02vqGX/test/contract.test.js:35:10)
+      at TestContext.<anonymous> (file:///tmp/ia03-verify.02vqGX/test/contract.test.js:130:5)
+      at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+      at async Test.run (node:internal/test_runner/test:932:9)
+      at async Suite.processPendingSubtests (node:internal/test_runner/test:629:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: 404,
+    expected: 422,
+    operator: 'strictEqual'
+  }
+
+test at test/contract.test.js:134:3
+✖ §4.2 rules on fields: tableId 1..200, 1..20 lines, qty 1..20 (3.639169ms)
+  AssertionError [ERR_ASSERTION]: status {"tableId":201,"items":[{"menuItemId":1,"qty":1}]} → 404 {"error":"not_found","message":"no such route"}
+  
+  404 !== 400
+  
+      at assertProblem (file:///tmp/ia03-verify.02vqGX/test/contract.test.js:35:10)
+      at TestContext.<anonymous> (file:///tmp/ia03-verify.02vqGX/test/contract.test.js:144:29)
+      at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+      at async Test.run (node:internal/test_runner/test:932:9)
+      at async Suite.processPendingSubtests (node:internal/test_runner/test:629:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: 404,
+    expected: 400,
+    operator: 'strictEqual'
+  }
+
+test at test/contract.test.js:147:3
+✖ §4.2 a unit price is the price when the order was placed (3.550968ms)
+  AssertionError [ERR_ASSERTION]: {"error":"not_found","message":"no such route"}
+  
+  404 !== 201
+  
+      at TestContext.<anonymous> (file:///tmp/ia03-verify.02vqGX/test/contract.test.js:150:12)
+      at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+      at async Test.run (node:internal/test_runner/test:932:9)
+      at async Suite.processPendingSubtests (node:internal/test_runner/test:629:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: 404,
+    expected: 201,
+    operator: 'strictEqual'
+  }
+
+test at test/contract.test.js:158:3
+✖ §4.3 GET /v1/orders/{id} of an unknown order is 404 not-found (1.71584ms)
+  AssertionError [ERR_ASSERTION]: content-type  → 404 {"error":"not_found","message":"no such route"}
+      at assertProblem (file:///tmp/ia03-verify.02vqGX/test/contract.test.js:36:10)
+      at TestContext.<anonymous> (file:///tmp/ia03-verify.02vqGX/test/contract.test.js:159:5)
+      at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+      at async Test.run (node:internal/test_runner/test:932:9)
+      at async Suite.processPendingSubtests (node:internal/test_runner/test:629:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: 'application/json',
+    expected: /^application\/problem\+json/,
+    operator: 'match'
+  }
+
+test at test/contract.test.js:164:3
+✖ §4.2 no Idempotency-Key is 400 and creates nothing (2.499373ms)
+  AssertionError [ERR_ASSERTION]: status  → 404 {"error":"not_found","message":"no such route"}
+  
+  404 !== 400
+  
+      at assertProblem (file:///tmp/ia03-verify.02vqGX/test/contract.test.js:35:10)
+      at TestContext.<anonymous> (file:///tmp/ia03-verify.02vqGX/test/contract.test.js:167:5)
+      at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+      at async Test.run (node:internal/test_runner/test:932:9)
+      at async Promise.all (index 0)
+      at async Suite.run (node:internal/test_runner/test:1310:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:629:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: 404,
+    expected: 400,
+    operator: 'strictEqual'
+  }
+
+test at test/contract.test.js:174:3
+✖ §4.2 the key is checked before the body (1.949184ms)
+  AssertionError [ERR_ASSERTION]: status  → 404 {"error":"not_found","message":"no such route"}
+  
+  404 !== 400
+  
+      at assertProblem (file:///tmp/ia03-verify.02vqGX/test/contract.test.js:35:10)
+      at TestContext.<anonymous> (file:///tmp/ia03-verify.02vqGX/test/contract.test.js:175:5)
+      at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+      at async Test.run (node:internal/test_runner/test:932:9)
+      at async Suite.processPendingSubtests (node:internal/test_runner/test:629:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: 404,
+    expected: 400,
+    operator: 'strictEqual'
+  }
+
+test at test/contract.test.js:178:3
+✖ §4.2 a retry with the same key and body replays the first response (2.366058ms)
+  AssertionError [ERR_ASSERTION]: {"error":"not_found","message":"no such route"}
+  
+  404 !== 201
+  
+      at TestContext.<anonymous> (file:///tmp/ia03-verify.02vqGX/test/contract.test.js:181:12)
+      at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+      at async Test.run (node:internal/test_runner/test:932:9)
+      at async Suite.processPendingSubtests (node:internal/test_runner/test:629:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: 404,
+    expected: 201,
+    operator: 'strictEqual'
+  }
+
+test at test/contract.test.js:191:3
+✖ §4.2 "the same body" means the same JSON value: key order and whitespace do not matter (2.510632ms)
+  AssertionError [ERR_ASSERTION]: {"error":"not_found","message":"no such route"}
+  
+  404 !== 201
+  
+      at TestContext.<anonymous> (file:///tmp/ia03-verify.02vqGX/test/contract.test.js:194:12)
+      at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+      at async Test.run (node:internal/test_runner/test:932:9)
+      at async Suite.processPendingSubtests (node:internal/test_runner/test:629:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: 404,
+    expected: 201,
+    operator: 'strictEqual'
+  }
+
+test at test/contract.test.js:201:3
+✖ §4.2 the same key with a different body is 422 and creates nothing (3.625342ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  404 !== 201
+  
+      at TestContext.<anonymous> (file:///tmp/ia03-verify.02vqGX/test/contract.test.js:203:12)
+      at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+      at async Test.run (node:internal/test_runner/test:932:9)
+      at async Suite.processPendingSubtests (node:internal/test_runner/test:629:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 404,
+    expected: 201,
+    operator: 'strictEqual'
+  }
+
+test at test/contract.test.js:210:3
+✖ §4.2 only a 201 is stored: after a 4xx the same key may be used with a fixed body (1.640785ms)
+  AssertionError [ERR_ASSERTION]: status  → 404 {"error":"not_found","message":"no such route"}
+  
+  404 !== 400
+  
+      at assertProblem (file:///tmp/ia03-verify.02vqGX/test/contract.test.js:35:10)
+      at TestContext.<anonymous> (file:///tmp/ia03-verify.02vqGX/test/contract.test.js:213:5)
+      at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+      at async Test.run (node:internal/test_runner/test:932:9)
+      at async Suite.processPendingSubtests (node:internal/test_runner/test:629:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: 404,
+    expected: 400,
+    operator: 'strictEqual'
+  }
+
+test at test/contract.test.js:224:3
+✖ §4.2 the same key sent five times at once places one order (7.851417ms)
+  AssertionError [ERR_ASSERTION]: 404 {"error":"not_found","message":"no such route"}
+      at TestContext.<anonymous> (file:///tmp/ia03-verify.02vqGX/test/contract.test.js:227:32)
+      at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+      at async Test.run (node:internal/test_runner/test:932:9)
+      at async Suite.processPendingSubtests (node:internal/test_runner/test:629:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: '=='
+  }
+
+test at test/contract.test.js:247:3
+✖ §4.4 newest first; every order exactly once; default page size 20 (1.799661ms)
+  AssertionError [ERR_ASSERTION]: {"error":"not_found","message":"no such route"}
+  
+  404 !== 201
+  
+      at placeMany (file:///tmp/ia03-verify.02vqGX/test/contract.test.js:241:14)
+      at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+      at async TestContext.<anonymous> (file:///tmp/ia03-verify.02vqGX/test/contract.test.js:249:17)
+      at async Test.run (node:internal/test_runner/test:932:9)
+      at async Promise.all (index 0)
+      at async Suite.run (node:internal/test_runner/test:1310:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:629:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: 404,
+    expected: 201,
+    operator: 'strictEqual'
+  }
+
+test at test/contract.test.js:256:3
+✖ §4.4 nextCursor is null exactly when there is nothing more (2.170708ms)
+  AssertionError [ERR_ASSERTION]: {"error":"not_found","message":"no such route"}
+  
+  404 !== 201
+  
+      at placeMany (file:///tmp/ia03-verify.02vqGX/test/contract.test.js:241:14)
+      at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+      at async TestContext.<anonymous> (file:///tmp/ia03-verify.02vqGX/test/contract.test.js:258:5)
+      at async Test.run (node:internal/test_runner/test:932:9)
+      at async Suite.processPendingSubtests (node:internal/test_runner/test:629:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: 404,
+    expected: 201,
+    operator: 'strictEqual'
+  }
+
+test at test/contract.test.js:265:3
+✖ §4.4 an order placed between two pages does not shift the next page (1.825587ms)
+  AssertionError [ERR_ASSERTION]: {"error":"not_found","message":"no such route"}
+  
+  404 !== 201
+  
+      at placeMany (file:///tmp/ia03-verify.02vqGX/test/contract.test.js:241:14)
+      at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+      at async TestContext.<anonymous> (file:///tmp/ia03-verify.02vqGX/test/contract.test.js:267:17)
+      at async Test.run (node:internal/test_runner/test:932:9)
+      at async Suite.processPendingSubtests (node:internal/test_runner/test:629:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: 404,
+    expected: 201,
+    operator: 'strictEqual'
+  }
+
+test at test/contract.test.js:279:3
+✖ §4.4 out-of-range limit is an error, not clamped (1.426848ms)
+  AssertionError [ERR_ASSERTION]: status limit=0 → 404 {"error":"not_found","message":"no such route"}
+  
+  404 !== 400
+  
+      at assertProblem (file:///tmp/ia03-verify.02vqGX/test/contract.test.js:35:10)
+      at TestContext.<anonymous> (file:///tmp/ia03-verify.02vqGX/test/contract.test.js:282:7)
+      at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+      at async Test.run (node:internal/test_runner/test:932:9)
+      at async Suite.processPendingSubtests (node:internal/test_runner/test:629:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: 404,
+    expected: 400,
+    operator: 'strictEqual'
+  }
+
+test at test/contract.test.js:288:3
+✖ §4.4 a cursor the server cannot read is 400 validation (1.543129ms)
+  AssertionError [ERR_ASSERTION]: status cursor=not-a-cursor → 404 {"error":"not_found","message":"no such route"}
+  
+  404 !== 400
+  
+      at assertProblem (file:///tmp/ia03-verify.02vqGX/test/contract.test.js:35:10)
+      at TestContext.<anonymous> (file:///tmp/ia03-verify.02vqGX/test/contract.test.js:291:7)
+      at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+      at async Test.run (node:internal/test_runner/test:932:9)
+      at async Suite.processPendingSubtests (node:internal/test_runner/test:629:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: 404,
+    expected: 400,
+    operator: 'strictEqual'
+  }
+
+test at test/contract.test.js:298:3
+✖ §5 legacy GET /menu/{id} is unchanged, and announces its end (3.789781ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  + actual - expected
+  
+  + null
+  - '@1792022400'
+  
+      at TestContext.<anonymous> (file:///tmp/ia03-verify.02vqGX/test/contract.test.js:302:12)
+      at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+      at async Test.run (node:internal/test_runner/test:932:9)
+      at async Promise.all (index 0)
+      at async Suite.run (node:internal/test_runner/test:1310:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:629:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: null,
+    expected: '@1792022400',
+    operator: 'strictEqual'
+  }
+
+test at test/contract.test.js:307:3
+✖ §5 legacy errors keep their old shape — the new error model is for /v1 only (2.07685ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  + actual - expected
+  
+  + null
+  - '@1792022400'
+  
+      at TestContext.<anonymous> (file:///tmp/ia03-verify.02vqGX/test/contract.test.js:314:12)
+      at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+      at async Test.run (node:internal/test_runner/test:932:9)
+      at async Suite.processPendingSubtests (node:internal/test_runner/test:629:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: null,
+    expected: '@1792022400',
+    operator: 'strictEqual'
+  }
+
+test at test/contract.test.js:322:3
+✖ §5 a price written through the legacy API reads the same through v1 (2.293806ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  + actual - expected
+  
+  + null
+  - '@1792022400'
+  
+      at TestContext.<anonymous> (file:///tmp/ia03-verify.02vqGX/test/contract.test.js:326:12)
+      at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+      at async Test.run (node:internal/test_runner/test:932:9)
+      at async Suite.processPendingSubtests (node:internal/test_runner/test:629:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: null,
+    expected: '@1792022400',
+    operator: 'strictEqual'
+  }
+
+test at test/contract.test.js:371:3
+✖ §4.2 a retry that lands on the other instance is still a replay (3.509377ms)
+  AssertionError [ERR_ASSERTION]: {"error":"not_found","message":"no such route"}
+  
+  404 !== 201
+  
+      at TestContext.<anonymous> (file:///tmp/ia03-verify.02vqGX/test/contract.test.js:374:12)
+      at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+      at async Test.run (node:internal/test_runner/test:932:9)
+      at async Promise.all (index 0)
+      at async Suite.run (node:internal/test_runner/test:1310:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:629:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: 404,
+    expected: 201,
+    operator: 'strictEqual'
+  }
+
+test at test/contract.test.js:383:3
+✖ §4.4 a cursor from one instance works on the other (6.221561ms)
+  AssertionError [ERR_ASSERTION]: {"error":"not_found","message":"no such route"}
+  
+  404 !== 200
+  
+      at TestContext.<anonymous> (file:///tmp/ia03-verify.02vqGX/test/contract.test.js:387:12)
+      at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+      at async Test.run (node:internal/test_runner/test:932:9)
+      at async Suite.processPendingSubtests (node:internal/test_runner/test:629:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: 404,
+    expected: 200,
+    operator: 'strictEqual'
+  }
