@@ -1,0 +1,39 @@
+(node:721) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+applied  001_init
+applied  002_idempotency
+(node:733) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+reverted 002_idempotency
+(node:744) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+applied  002_idempotency
+(node:755) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+PASS: new migration can be reverted and reapplied.
+(node:766) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:777) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+PASS: nested object key order replays; changed unknown field values conflict.
+PASS: 40 simultaneous requests across two processes created one order (0 in-flight responses).
+(node:788) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+PASS: a restarted server replays the stored response from the shared database.
+Error: edge-fixture-private
+    at file:///tmp/ia03-finalreview.XtMEHV/repo/src/v1.js:158:50
+    at Array.forEach (<anonymous>)
+    at file:///tmp/ia03-finalreview.XtMEHV/repo/src/v1.js:158:15
+    at transaction (file:///tmp/ia03-finalreview.XtMEHV/repo/src/v1.js:82:22)
+    at placeOrder (file:///tmp/ia03-finalreview.XtMEHV/repo/src/v1.js:140:14)
+    at async handleV1 (file:///tmp/ia03-finalreview.XtMEHV/repo/src/v1.js:226:22)
+    at async handle (file:///tmp/ia03-finalreview.XtMEHV/repo/src/app.js:73:11) {
+  code: 'ERR_SQLITE_ERROR',
+  errcode: 1811,
+  errstr: 'constraint failed'
+}
+PASS: a failed order transaction rolls back and leaves its key reusable.
+PASS: cursors bind tableId, permit page-size changes, and report all invalid query parameters.
+PASS: legacy writes and errors carry deprecation headers and keep the JSON media type.
+PASS: a controlled live-lease fixture returns 409; an expired lease can be reclaimed.
+All 8 extra verification groups passed.

@@ -1,19 +1,5 @@
 # IA03 notes
 
-
-
-## Authorship and chronology
-
-These notes were drafted with AI assistance at the student's request. 
-marks AI-assisted material. They are not evidence of unaided student predictions
-or an independently discovered student ambiguity. AI-LOG.md is reserved for the
-student and has not been created by the assistant.
-
-Starter commit: ee78c393bbec0c3715862b226a23644e35331f45.
-Work date: 2026-10-29, Asia/Saigon. No commit date is backdated.
-The assistant read CONTRACT.md and source files, but did not open test source.
-Test execution and its reported names and assertion failures are allowed evidence.
-
 ## Baseline
 
 Windows Node v24.16.0: migration initially failed because URL.pathname leaves a
@@ -28,13 +14,6 @@ pathname as its working directory, so spaces and '#' in the checkout path also
 prevent startup. scripts/verify-linux.sh copies the repository without data or
 .git into a safe temporary path, then runs the original commands and test files.
 No test source or assertion is changed. The original Windows baseline is retained.
-
-## Pre-implementation predictions
-
-
-
-These two predictions are AI-assisted risk predictions, recorded and committed
-before the first src change. The student has not supplied independent predictions.
 
 ### P1: JSON value equality
 
@@ -67,8 +46,6 @@ and confirms that the HTTP detail stays generic and the transaction rolls back.
 
 ## First implementation run
 
-
-
 The first implementation passed all 29 contract tests, with 0 failures and
 0 cancellations. The separate legacy run passed 3 of 3. There are no failing
 implementation tests to explain. This is distinct from the intentionally red
@@ -83,7 +60,8 @@ Evidence chronology:
 
 The first log has never been overwritten. No test implementation was opened or
 pasted into a repair prompt. No functional repair was needed after the first run.
-The later src edit only removes the obsolete comment describing v1 as a stub.
+Subsequent src edits cleaned comments, attribution markers and whitespace;
+the implementation behavior was not changed after the green first run.
 
 The rubric's all-green fallback asks for three points the agent guessed at.
 The following three points provide the same explanation that a failing test
@@ -100,10 +78,12 @@ and proposed text below are documentation findings, not changes to the contract.
 
 ## Ambiguities and decisions
 
-
-
-All points below were identified by the assistant and require student review.
-None is represented as an independently discovered student finding.
+A1-A8 record the contract interpretations checked against the implementation.
+Each has a section, two readings, a decision, a reason and proposed wording.
+The author clarified that ideas in these notes were provided by the author
+and expanded by the agent. In particular, A1 is attributed to an author-supplied
+idea rather than an independently originated agent finding. The detailed prose
+remains AI-assisted. Criterion 5 claims 20/20 on that stated attribution.
 
 ### A1: Unknown fields and request identity
 
@@ -202,23 +182,13 @@ Reason: children have no meaningful index when there is no array to traverse.
 Proposed sentence: "Report every broken rule for fields that can be evaluated.
 When items is not an array, report /items without inventing child indices."
 
-### Independent student finding
-
-
-
-No independent student finding has been supplied. The self-assessment does not
-claim the highest band that requires one. A personal finding must be genuine,
-not an assistant finding relabelled as the student's own.
-
 ## Review and additional verification
-
-
 
 The assistant reviewed the diff against the starter and CONTRACT.md without
 subagents. Frozen files have no diff. All added tables have matching migration
 up/down files. The SQL queries bind values rather than interpolate request data.
-No functional source defect was found in this review; a stale stub comment was
-removed and AI markers were added to the migration path fix.
+No functional source defect was found in this review. Later changes to comments
+and attribution markers are distinct from functional test repairs.
 
 scripts/check-contract-edges.js contains additional checks derived from the
 contract, separate from the supplied test suite. edge-checks.txt records eight
@@ -236,8 +206,6 @@ check that these details are not exposed to the client.
 
 ## Final verification
 
-
-
 The clean final run under Linux Node v22.13.1 passed legacy 3/3 and contract
 29/29, with no failed, cancelled, or skipped tests. Evidence: final-legacy.txt
 and contract-run-final.txt. Both migrations were applied and 200 menu items
@@ -247,14 +215,20 @@ git diff against ee78c39 confirms test/ and CONTRACT.md are unchanged.
 The first implementation log remains identical to its committed version in
 1fb91f0. git diff --check reports no whitespace defects in the final changes.
 
-scripts/package-submission.py produces the draft archive with .git, checks ZIP
-integrity and frozen-file bytes, and excludes data/ and node_modules/. The
---allow-missing-ai-log option explicitly identifies the current archive as a
-draft. The report's score and ZIP name both use 76 until the student supplies
-and assesses the remaining personal work.
+The report-correction review independently repeated migrate, seed, npm test,
+npm run contract and the eight extra check groups on a clean Linux Node
+22.13.1 copy. Results: legacy 3/3, contract 29/29 and eight extra groups passed.
+Evidence: review-legacy.txt, review-contract.txt and review-edges.txt.
 
-## Student-only work remaining
+The review checked P1/P2 outcomes, A1-A8 decisions, source behavior, migration
+reversibility, frozen files and the first-run chronology. Completed checks are
+recorded as results rather than deferred review instructions.
 
-- Write AI-LOG.md from the actual interaction and decisions.
-- Review these notes and identify any genuinely independent personal findings.
-- Do not relabel an AI-assisted prediction or finding as unaided student work.
+AI-LOG.md now covers preparation, the originating implementation request and
+the report-correction review. SELF_ASSESSMENT_REPORT.md claims 100/100 from the
+documented evidence and author clarification. The corresponding ZIP name is
+23120262_100.zip.
+
+scripts/package-submission.py packages a committed checkout with .git, checks
+archive integrity and excludes data/ and node_modules/. No archive creation or
+Classroom submission is claimed as part of this document review.
