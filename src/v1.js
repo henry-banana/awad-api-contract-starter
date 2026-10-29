@@ -1,9 +1,7 @@
 // The /v1 API. Implement it from CONTRACT.md — the contract is the spec.
 //
-// createV1(db) returns a handler for every request whose path is /v1 or starts
-// with /v1/. The handler must answer the request and return true. Returning
-// false (as this stub does) hands the request to the legacy code, which
-// answers 404 { error: 'not_found' } — the wrong shape for /v1.
+// createV1(db) answers every /v1 request and returns true. All v1 errors
+// are problem details; the handler does not fall through to legacy routes.
 //
 // Helpers you may use: send(), readRaw() in ./http.js.
 // Schema: migrations/001_init.up.sql. Add new tables as migrations/002_*.sql.

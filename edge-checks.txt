@@ -1,0 +1,25 @@
+applied  001_init
+applied  002_idempotency
+reverted 002_idempotency
+applied  002_idempotency
+PASS: new migration can be reverted and reapplied.
+PASS: nested object key order replays; changed unknown field values conflict.
+PASS: 40 simultaneous requests across two processes created one order (0 in-flight responses).
+PASS: a restarted server replays the stored response from the shared database.
+Error: edge-fixture-private
+    at file:///D:/Workspace/1.%20Study/courses-fit-hcmus/2026-2027/csc13114-advanced-web/IA%2303/awad-api-contract-starter/src/v1.js:158:50
+    at Array.forEach (<anonymous>)
+    at file:///D:/Workspace/1.%20Study/courses-fit-hcmus/2026-2027/csc13114-advanced-web/IA%2303/awad-api-contract-starter/src/v1.js:158:15
+    at transaction (file:///D:/Workspace/1.%20Study/courses-fit-hcmus/2026-2027/csc13114-advanced-web/IA%2303/awad-api-contract-starter/src/v1.js:82:22)
+    at placeOrder (file:///D:/Workspace/1.%20Study/courses-fit-hcmus/2026-2027/csc13114-advanced-web/IA%2303/awad-api-contract-starter/src/v1.js:140:14)
+    at async handleV1 (file:///D:/Workspace/1.%20Study/courses-fit-hcmus/2026-2027/csc13114-advanced-web/IA%2303/awad-api-contract-starter/src/v1.js:226:22)
+    at async handle (file:///D:/Workspace/1.%20Study/courses-fit-hcmus/2026-2027/csc13114-advanced-web/IA%2303/awad-api-contract-starter/src/app.js:73:11) {
+  code: 'ERR_SQLITE_ERROR',
+  errcode: 1811,
+  errstr: 'constraint failed'
+}
+PASS: a failed order transaction rolls back and leaves its key reusable.
+PASS: cursors bind tableId, permit page-size changes, and report all invalid query parameters.
+PASS: legacy writes and errors carry deprecation headers and keep the JSON media type.
+PASS: a controlled live-lease fixture returns 409; an expired lease can be reclaimed.
+All 8 extra verification groups passed.
