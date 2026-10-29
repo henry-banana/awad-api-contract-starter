@@ -59,6 +59,9 @@ contract-run-1.txt. Test logs are raw command output and have no inserted marker
 - Update SELF_ASSESSMENT_REPORT.md with justified scores and evidence.
 - Commit your additions and rebuild the ZIP with .git included, excluding data/
   and node_modules/. Rename it to 23120262_<revised-total>.zip.
+- After updating the report and committing, run `python scripts/package-submission.py`.
+  It derives the ZIP name from the report and checks the archive contents.
+  Add `--overwrite` only when intentionally replacing an existing archive.
 - Check the archive includes both contract logs and all three required reports.
 - Submit through your student Google account after checking the current
   Classroom status. No submission has been made by the assistant.

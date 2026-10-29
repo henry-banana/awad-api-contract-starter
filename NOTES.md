@@ -236,7 +236,22 @@ check that these details are not exposed to the client.
 
 ## Final verification
 
-Pending final clean verification and archive check.
+TDTH-FLAG
+
+The clean final run under Linux Node v22.13.1 passed legacy 3/3 and contract
+29/29, with no failed, cancelled, or skipped tests. Evidence: final-legacy.txt
+and contract-run-final.txt. Both migrations were applied and 200 menu items
+were seeded in a fresh temporary copy before those commands.
+
+git diff against ee78c39 confirms test/ and CONTRACT.md are unchanged.
+The first implementation log remains identical to its committed version in
+1fb91f0. git diff --check reports no whitespace defects in the final changes.
+
+scripts/package-submission.py produces the draft archive with .git, checks ZIP
+integrity and frozen-file bytes, and excludes data/ and node_modules/. The
+--allow-missing-ai-log option explicitly identifies the current archive as a
+draft. The report's score and ZIP name both use 76 until the student supplies
+and assesses the remaining personal work.
 
 ## Student-only work remaining
 
