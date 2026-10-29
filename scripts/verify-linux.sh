@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# TDTH-FLAG: Run the unchanged suite from a filesystem path without URL escapes.
+#  Run the unchanged suite from a filesystem path without URL escapes.
 set -euo pipefail
 root=$(CDPATH= cd -- "$(dirname -- "$0")/.." && pwd)
 mode=${1:-final}

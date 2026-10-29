@@ -1,4 +1,4 @@
-// TDTH-FLAG
+
 // Extra checks written from CONTRACT.md. The supplied test source is not read.
 import assert from 'node:assert/strict';
 import { fork, execFileSync } from 'node:child_process';

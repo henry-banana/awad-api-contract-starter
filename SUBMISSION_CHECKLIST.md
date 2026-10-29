@@ -1,6 +1,6 @@
 # IA03 submission checklist
 
-TDTH-FLAG
+
 
 ## Completed by the assistant
 
@@ -53,7 +53,7 @@ contract-run-1.txt. Test logs are raw command output and have no inserted marker
 ## Student action before submission
 
 - Read NOTES.md and the implementation; verify that the explanations match
-  your understanding. TDTH-FLAG identifies AI-assisted prose and code changes.
+  your understanding.  identifies AI-assisted prose and code changes.
 - Write AI-LOG.md yourself from the actual prompts and decisions. Do not invent
   a rejection, manual edit, or personal finding that did not happen.
 - Update SELF_ASSESSMENT_REPORT.md with justified scores and evidence.

@@ -6,7 +6,7 @@
 // Helpers you may use: send(), readRaw() in ./http.js.
 // Schema: migrations/001_init.up.sql. Add new tables as migrations/002_*.sql.
 
-// TDTH-FLAG
+
 import { createHash, randomUUID } from 'node:crypto';
 import { setImmediate as nextTurn } from 'node:timers/promises';
 import { send, readRaw } from './http.js';

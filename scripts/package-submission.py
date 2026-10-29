@@ -1,4 +1,4 @@
-# TDTH-FLAG
+# 
 """Package a clean IA03 checkout, preserving .git and the first-run evidence."""
 import argparse
 import re

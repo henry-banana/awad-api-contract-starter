@@ -1,6 +1,6 @@
 # Self-assessment: IA03 API contract
 
-TDTH-FLAG
+
 
 Student ID: 23120262
 Student: Tong Duong Thai Hoa
@@ -22,7 +22,7 @@ submission. AI-LOG.md is intentionally left for the student to write.
 
 ## What I did not manage
 
-TDTH-FLAG
+
 
 - AI-LOG.md is not included yet, as explicitly requested by the student.
 - No unaided student prediction or independent student ambiguity is evidenced.
@@ -39,7 +39,7 @@ TDTH-FLAG
 
 ## What I would do differently
 
-TDTH-FLAG
+
 
 Have the student read the contract, write and commit personal predictions before
 any agent analysis, then keep a contemporaneous personal AI log. Run the starter

@@ -1,10 +1,10 @@
 # IA03 notes
 
-TDTH-FLAG
+
 
 ## Authorship and chronology
 
-These notes were drafted with AI assistance at the student's request. TDTH-FLAG
+These notes were drafted with AI assistance at the student's request. 
 marks AI-assisted material. They are not evidence of unaided student predictions
 or an independently discovered student ambiguity. AI-LOG.md is reserved for the
 student and has not been created by the assistant.
@@ -31,7 +31,7 @@ No test source or assertion is changed. The original Windows baseline is retaine
 
 ## Pre-implementation predictions
 
-TDTH-FLAG
+
 
 These two predictions are AI-assisted risk predictions, recorded and committed
 before the first src change. The student has not supplied independent predictions.
@@ -67,7 +67,7 @@ and confirms that the HTTP detail stays generic and the transaction rolls back.
 
 ## First implementation run
 
-TDTH-FLAG
+
 
 The first implementation passed all 29 contract tests, with 0 failures and
 0 cancellations. The separate legacy run passed 3 of 3. There are no failing
@@ -100,7 +100,7 @@ and proposed text below are documentation findings, not changes to the contract.
 
 ## Ambiguities and decisions
 
-TDTH-FLAG
+
 
 All points below were identified by the assistant and require student review.
 None is represented as an independently discovered student finding.
@@ -204,7 +204,7 @@ When items is not an array, report /items without inventing child indices."
 
 ### Independent student finding
 
-TDTH-FLAG
+
 
 No independent student finding has been supplied. The self-assessment does not
 claim the highest band that requires one. A personal finding must be genuine,
@@ -212,7 +212,7 @@ not an assistant finding relabelled as the student's own.
 
 ## Review and additional verification
 
-TDTH-FLAG
+
 
 The assistant reviewed the diff against the starter and CONTRACT.md without
 subagents. Frozen files have no diff. All added tables have matching migration
@@ -236,7 +236,7 @@ check that these details are not exposed to the client.
 
 ## Final verification
 
-TDTH-FLAG
+
 
 The clean final run under Linux Node v22.13.1 passed legacy 3/3 and contract
 29/29, with no failed, cancelled, or skipped tests. Evidence: final-legacy.txt
